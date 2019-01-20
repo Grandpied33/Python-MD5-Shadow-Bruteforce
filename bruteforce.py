@@ -51,8 +51,8 @@ with open("shadow_test", "r") as ins:
                             #print('mot de passe clair généré : ' +pswd)
 
 
-                            if generatedpassword == list:
-                                print('Le Mot de passe pour' + user + ' est : ' + compare)
+                            if generatedpassword == compare:
+                                print('Le Mot de passe pour' + user + ' est : ' + pswd)
 
     #print(list)
 
