@@ -1,3 +1,4 @@
+import multiprocessing as mp
 import hashlib
 import itertools
 
@@ -34,9 +35,9 @@ with open("shadow_test", "r") as ins:
             list.append(mdp)
             # trying to Bruteforce
             for _ in range(12):
-                passwords = [''.join(word) for word in itertools.product(Alphabet, repeat=CharLength)]
+                passwords = (''.join(word) for word in itertools.product(Alphabet, repeat=CharLength))
 
-                print(*passwords)
+                #print(*passwords)
                 for pswd in passwords:
                     hash_object = hashlib.md5(str.encode(pswd)).hexdigest()
                     # hash_object.update(*passwords.encode('utf-8'))
