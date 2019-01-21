@@ -7,7 +7,7 @@ import time
 
 
 #possible characters in user password
-Alphabet = ("abcdefghijklmnopqrstuvwxyz")
+Alphabet = ("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-_.;#@")
 #minimum password value
 CharLength = 6
 
