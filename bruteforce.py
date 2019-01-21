@@ -1,12 +1,13 @@
 import multiprocessing as mp
 import hashlib
 import itertools
+import time
 
 
 
 
 #possible characters in user password
-Alphabet = ("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-_.;#@")
+Alphabet = ("abcdefghijklmnopqrstuvwxyz")
 #minimum password value
 CharLength = 6
 
@@ -30,6 +31,7 @@ with open("shadow_test", "r") as ins:
     list = []
     #removing passowrd with * or !
     for mdp in passwd:
+        start = time.time()
         if mdp != '*' and mdp != '!':
             str(mdp)
             list.append(mdp)
@@ -52,7 +54,10 @@ with open("shadow_test", "r") as ins:
 
 
                             if generatedpassword == compare:
-                                print('Le Mot de passe pour' + user + ' est : ' + pswd)
+                                end = time.time()
+                                print('Le Mot de passe pour ' + user + ' est : ' + pswd )
+                                print(print(end - start))
+
 
     #print(list)
 
